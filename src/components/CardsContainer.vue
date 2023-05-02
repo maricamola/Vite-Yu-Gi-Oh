@@ -1,15 +1,24 @@
 
 
 <script>
+import Card from './Card.vue'
+
 export default {
-  name: 'CardsContainer'
+  name: 'CardsContainer',
+  components: {
+    Card
+  }
 }
 </script>
 
 <template>
-  <h1>Cards Container</h1>
+  <div class="container">
+    <div class="row">
+      <Card />
+    </div>
+  </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
 
 </style>

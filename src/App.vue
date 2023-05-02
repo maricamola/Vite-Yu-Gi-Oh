@@ -22,6 +22,7 @@ export default {
     getApi(){
       axios.get(store.apiUrl)
       .then(result => {
+        store.cardsList = result.data.results
         console.log(result.data);
       })
     }
