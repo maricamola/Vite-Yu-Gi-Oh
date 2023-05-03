@@ -21,10 +21,21 @@ export default {
   methods: {
     getApi() {
       //Per evitare che stampi tutte le immagini
-      axios.get(store.apiUrl + "?num=95&offset=0")
+      axios.get(store.apiUrl, {
+        params: {
+          type: store.filterType
+        }
+      })
         .then(result => {
           store.resultArray = result.data.data;
-          console.log(result.data.data);
+
+          if (store.listType.length === 0) {
+            store.resultArray.forEach(element => {
+              if (!store.listType.includes(element.type)) {
+                store.listType.push(element.type)
+              }
+            })
+          }
         })
 
     }
