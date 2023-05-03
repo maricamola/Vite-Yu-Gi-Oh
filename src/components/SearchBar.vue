@@ -9,6 +9,16 @@ export default {
       store
     }
   },
+  methods: {
+    reset() {
+      store.typeToSearch = '';
+      this.$emit('startSearch');
+    },
+    startSearch() {
+      store.apiUrl = store.originalapiUrl
+      this.$emit('startSearch');
+    }
+  }
 }
 </script>
 
@@ -16,13 +26,13 @@ export default {
 <template>
   <div class="container m-3 d-flex">
     <select v-model="store.filterType" class="form-select" aria-label="Default select example">
-      <option value="" selected>Select type</option>
+      <option @click="$emit('changeFilterType')" value="null" selected>Select type</option>
       <option v-for="(type, id) in store.listType" :key="id" :value="type">{{ type }}
       </option>
     </select>
 
 
-    <div class="btn btn-warning ms-3" @click="$emit('changeType')">Search</div>
+    <div class="btn btn-warning ms-3" @click="$emit('startSearch')">Search</div>
 
 
     <div class="btn btn-danger ms-3" @click="$emit('resetAll')">Reset</div>

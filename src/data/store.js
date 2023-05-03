@@ -7,4 +7,5 @@ export const store = reactive({
   //Array vuota dei type
   listType: [],
   filterType: null,
+  typeToSearch: '',
 });

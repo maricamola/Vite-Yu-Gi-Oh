@@ -37,7 +37,6 @@ export default {
             })
           }
         })
-
     }
   },
   mounted() {
@@ -45,14 +44,13 @@ export default {
   }
 }
 
-
 </script>
 
 
 <template>
   <Header />
 
-  <SearchBar />
+  <SearchBar @startSearch='getApi' />
 
   <CardsContainer />
 </template>
