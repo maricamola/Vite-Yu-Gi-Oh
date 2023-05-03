@@ -15,7 +15,6 @@ export default {
       this.$emit('startSearch');
     },
     startSearch() {
-      store.apiUrl = store.originalapiUrl
       this.$emit('startSearch');
     }
   }
@@ -26,7 +25,7 @@ export default {
 <template>
   <div class="container m-3 d-flex">
     <select v-model="store.filterType" class="form-select" aria-label="Default select example">
-      <option @click="$emit('changeFilterType')" value="null" selected>Select type</option>
+      <option value="null" selected>Select type</option>
       <option v-for="(type, id) in store.listType" :key="id" :value="type">{{ type }}
       </option>
     </select>
