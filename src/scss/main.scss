@@ -1,12 +1,11 @@
 @use './partials/vars' as *;
 
-
 @import 'bootstrap/scss/bootstrap';
+
+
 
 body {
   min-height: 100vh;
   color: black;
-  background-image: linear-gradient(lighten($primary-color, 100%),
-      lighten($primary-color, 80%),
-    );
+  background-color: $primary-color;
 }
