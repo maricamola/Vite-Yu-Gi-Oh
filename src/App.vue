@@ -3,13 +3,15 @@ import axios from "axios";
 import { store } from "./data/store";
 import Header from './components/Header.vue'
 import CardsContainer from './components/CardsContainer.vue'
+import SearchBar from './components/SearchBar.vue'
 
 
 export default {
   name: 'App',
   components: {
     Header,
-    CardsContainer
+    CardsContainer,
+    SearchBar,
   },
   data() {
     return {
@@ -24,6 +26,7 @@ export default {
           store.resultArray = result.data.data;
           console.log(result.data.data);
         })
+
     }
   },
   mounted() {
@@ -37,6 +40,8 @@ export default {
 
 <template>
   <Header />
+
+  <SearchBar />
 
   <CardsContainer />
 </template>
