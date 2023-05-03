@@ -33,8 +33,7 @@ export default {
 .container {
   width: 80%;
   margin: 0 auto;
-  border: 1px solid black;
-  padding: 25px;
+  padding: 30px;
   margin-top: 20px;
   background-color: white;
 
@@ -52,7 +51,7 @@ export default {
   .cardsList {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
   }
 }

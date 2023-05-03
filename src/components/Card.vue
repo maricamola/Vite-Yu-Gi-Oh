@@ -27,8 +27,13 @@ export default {
   text-align: center;
   background-color: #D48F38;
   padding: 0;
-  margin: 0 10px;
-  width: 200px !important;
+  margin-bottom: 20px;
+  width: 200px;
+
+  h4 {
+    color: white;
+    margin-top: 10px;
+  }
 
   img {
     width: 100%;
