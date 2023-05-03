@@ -1,4 +1,5 @@
 <script>
+
 export default {
   name: 'Card',
   props: {
@@ -10,7 +11,7 @@ export default {
 </script>
 
 <template>
-  <div class="sc-card col">
+  <div class="sc-card">
     <img :src="img.image_url" :alt="name">
 
     <span class="text">
@@ -27,6 +28,7 @@ export default {
   background-color: #D48F38;
   padding: 0;
   margin: 0 10px;
+  width: 200px !important;
 
   img {
     width: 100%;

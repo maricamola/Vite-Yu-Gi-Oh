@@ -21,8 +21,8 @@ export default {
       //Per evitare che stampi tutte le immagini
       axios.get(store.apiUrl + "?num=95&offset=0")
         .then(result => {
-          store.resultArray = result.data.results
-          console.log(result.data);
+          store.resultArray = result.data.data;
+          console.log(result.data.data);
         })
     }
   },

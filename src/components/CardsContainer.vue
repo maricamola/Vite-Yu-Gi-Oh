@@ -21,7 +21,7 @@ export default {
       <h4>Found {{ store.resultArray.length }} cards</h4>
     </div>
     <!--Ciclo le cards-->
-    <div class="row">
+    <div class="cardsList">
       <Card v-for="card in store.resultArray" :key="card.id" :img="card.card_images[0]" :name="card.name"
         :type="card.archetype || card.type" />
     </div>
@@ -47,6 +47,13 @@ export default {
       margin: 0;
       padding: 0;
     }
+  }
+
+  .cardsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
   }
 }
 </style>
